@@ -21,9 +21,4 @@ public class DemoController {
         return "ok";
     }
 
-    @ResponseBody
-    @GetMapping("/get/{id}")
-    public String getById(@PathVariable  Integer id){
-        return "ok    "+id;
-    }
 }
