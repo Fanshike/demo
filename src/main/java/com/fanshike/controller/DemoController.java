@@ -2,6 +2,7 @@ package com.fanshike.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -18,5 +19,11 @@ public class DemoController {
     @RequestMapping("/get")
     public String getName(){
         return "ok";
+    }
+
+    @ResponseBody
+    @GetMapping("/get/{id}")
+    public String getById(@PathVariable  Integer id){
+        return "ok    "+id;
     }
 }
